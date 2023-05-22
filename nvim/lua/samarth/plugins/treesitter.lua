@@ -13,8 +13,8 @@ treesitter.setup({
     "c",
     "rust",
     "cpp",
-    "lua",
-    "luap",
+    "python",
+    "lua"
   },
   auto_install = true,
 })

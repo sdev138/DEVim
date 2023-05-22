@@ -75,6 +75,10 @@ return packer.startup(function(use)
   use("jose-elias-alvarez/null-ls.nvim")
   use("jayp0521/mason-null-ls.nvim")
 
+  -- auto closing 
+  use("windwp/nvim-autopairs")
+  use("windwp/nvim-ts-autotag")
+
   -- Dap Install
   use 'mfussenegger/nvim-dap'
 
@@ -88,6 +92,15 @@ return packer.startup(function(use)
 
   -- catpuccin
   use { "catppuccin/nvim", as = "catppuccin" }
+
+  -- alpha
+  use {
+    'goolord/alpha-nvim',
+    requires = { 'nvim-tree/nvim-web-devicons' },
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.startify'.config)
+    end
+  }
 
   if packer_bootstrap then
     require("packer").sync()

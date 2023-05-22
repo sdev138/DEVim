@@ -8,8 +8,4 @@ vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
 
 nvimtree.setup({
-  highlight = {
-        enable = true,
-        additional_vim_regex_highlighting = false
-    },
 })

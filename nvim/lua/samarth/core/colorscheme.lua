@@ -1,3 +1,4 @@
+-- tokyonight theme settings
 require("tokyonight").setup({
   -- your configuration comes here
   -- or leave it empty to use the default settings
@@ -34,6 +35,7 @@ require("tokyonight").setup({
   on_highlights = function(highlights, colors) end,
 })
 
+-- start of the catpuccin theme settings
 require("catppuccin").setup({
     flavour = "mocha", -- latte, frappe, macchiato, mocha
     background = { -- :h background
@@ -42,7 +44,7 @@ require("catppuccin").setup({
     },
     transparent_background = true,
     show_end_of_buffer = false, -- show the '~' characters after the end of buffers
-    term_colors = false,
+    term_colors = true,
     dim_inactive = {
         enabled = false,
         shade = "dark",
@@ -52,7 +54,7 @@ require("catppuccin").setup({
     no_bold = false, -- Force no bold
     styles = {
         comments = { "italic" },
-        conditionals = { "italic" },
+        conditionals = { "italic"},
         loops = {},
         functions = {},
         keywords = {},
@@ -79,6 +81,5 @@ require("catppuccin").setup({
 
 local status, _ = pcall(vim.cmd, "colorscheme catppuccin")
 if not status then
-  print("Colorscheme not found!")
+  print("Colorscheme not found... Please check colorscheme.lua")
 end
-

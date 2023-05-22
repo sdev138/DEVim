@@ -8,7 +8,7 @@ require("samarth.plugins.nvim-tree")
 require("samarth.plugins.nvim-cmp")
 require("samarth.plugins.lsp.mason")
 require("samarth.plugins.lsp.lspconfig")
-require'lspconfig'.pyright.setup{}
 require("samarth.plugins.treesitter")
 require("samarth.plugins.telescope")
-vim.cmd("silent !cat " .. "~/lucis.txt")
+require("samarth.plugins.alpha") -- initializing the alpha file
+require("samarth.plugins.autopairs") -- for autopairs 

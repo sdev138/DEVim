@@ -1,4 +1,5 @@
 local opt = vim.opt -- saving the local variable opt  for the global variable opt in vim for consisness
+local cmd = vim.cmd
 
 -- line numbers
 opt.relativenumber = true
@@ -9,9 +10,10 @@ opt.tabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
+opt.smartindent = true
 
 -- line wrapping
-opt.wrap = false
+opt.wrap = false 
 
 -- search settings
 opt.ignorecase = true -- ignoring the case when searching with a lowercase word
@@ -19,6 +21,11 @@ opt.smartcase = true -- considering the upper-case word when searching with a up
 
 -- cursor line
 opt.cursorline = true
+local cursorCall, _ = pcall(cmd, "highlight CursorLine cterm=underline")
+if not cursorCall then
+  print("Cursorline cannot be underlined")
+end
+-- opt.cursorlineopt = "underline"
 
 -- appearance
 opt.termguicolors = true
@@ -36,6 +43,3 @@ opt.splitright = true
 opt.splitbelow = true
 
 -- opt.iskeyword:append("-") // adding the '-' to the string when searching for words
-
-
-

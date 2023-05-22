@@ -3,6 +3,10 @@ vim.g.mapleader = " " -- setting the leader key
 local keymap = vim.keymap -- setting local variable keymap
 
 -- general keymaps
+keymap.set("n", "ge", "<S-g>") -- going to the last line of the file 
+keymap.set("n", "gh", "^") -- going to the beginning of the line 
+keymap.set("n", "gl", "$") 
+
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
 keymap.set("n", "x", '"-x')
@@ -24,7 +28,7 @@ keymap.set("n", "<leader>tp", ":tabp<CR>") -- go to the next tab
 -- vim maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") 
 
-keymap.set("n", "<leader>nv", ":NvimTreeToggle<CR>")
+keymap.set("n", "<leader>ee", ":NvimTreeToggle<CR>")
 
 -- telescope keymap bindings
 local builtin = require('telescope.builtin')
