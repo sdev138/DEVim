@@ -93,15 +93,6 @@ return packer.startup(function(use)
   -- catpuccin
   use { "catppuccin/nvim", as = "catppuccin" }
 
-  -- alpha
-  use {
-    'goolord/alpha-nvim',
-    requires = { 'nvim-tree/nvim-web-devicons' },
-    config = function ()
-        require'alpha'.setup(require'alpha.themes.startify'.config)
-    end
-  }
-
   if packer_bootstrap then
     require("packer").sync()
   end
