@@ -22,6 +22,7 @@ cd ~/.config
 git clone https://github.com/sdev138/DEVim main
 mv DEVim/* .
 rmdir DEVim
+nvim
 ```
 
 #ENJOY!
