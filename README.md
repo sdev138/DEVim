@@ -14,9 +14,14 @@ Lua scripting files for neovim. In case if anyone is looking for inspiration or 
   "<Leader>ff for fuzzy finder"
   "<Standard Vim key bindings>" 
 
-# Installation
-1) mkdir ~/.config
-2) cd ~/.config
-3) git clone https://github.com/sdev138/NVIM-Playground 
+#### Installation
+
+```shell
+rm -r ~/.config/nvim
+cd ~/.config
+git clone https://github.com/sdev138/DEVim main
+mv DEVim/* .
+rmdir DEVim
+```
 
 #ENJOY!
